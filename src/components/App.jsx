@@ -25,6 +25,18 @@ export class App extends Component {
     return true;
   };
 
+  editContact = updatedContact => {
+    this.setState(({ contacts }) => ({
+      contacts: contacts.map(contact => {
+        if (contact.id === updatedContact.id) {
+          const newContact = { ...contact, ...updatedContact };
+          return newContact;
+        }
+        return contact;
+      }),
+    }));
+  };
+
   deleteContact = id => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== id),
@@ -52,6 +64,7 @@ export class App extends Component {
           <ContactList
             contacts={filteredContacts}
             deleteContact={this.deleteContact}
+            editContact={this.editContact}
           />
         </Section>
       </div>
