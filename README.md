@@ -7,6 +7,11 @@
 
 ## Создание репозитория по шаблону
 
+Налаштування клонованого репозиторію git remote -v Змінити URL, якщо клонували з
+чужого, а хочемо пушити в свій git remote set-url --push origin
+git@github.com:Kcepriu/test_works_git.git git remote set-url origin
+git@github.com:Kcepriu/race_from_promice.git
+
 Используй этот репозиторий организации GoIT как шаблон для создания репозитория
 своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
 `«Create a new repository»`, как показано на изображении.
